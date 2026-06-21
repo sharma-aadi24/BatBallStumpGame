@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAT BALL STUMP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <button onclick="
+    let randomNumber= Math.random()*3;
+    let compChoice='';
+    if(randomNumber<=1){
+         compChoice ='Bat';
+    }
+    else if(randomNumber<=2){
+         compChoice ='Ball';
+    }
+    else {
+         compChoice ='Stump';
+    }
+    let resultMsg='';
+    if(compChoice=='Ball'){
+        resultMsg='You Won';
+    }
+    else if(compChoice=='Bat'){
+       resultMsg='Its a Tie';
+    }
+    else {
+        resultMsg='OH! YOU LOST';
+    }
+    alert(`YOU HAVE CHOOSEN Bat. COMPUTER CHOICE IS ${compChoice} and ${resultMsg}`);
+    ">Bat</button>
+
+    <button onclick="
+     randomNumber= Math.random()*3;
+     compChoice='';
+    if(randomNumber<=1){
+         compChoice ='Bat';
+    }
+    else if(randomNumber<=2){
+         compChoice ='Ball';
+    }
+    else {
+         compChoice ='Stump';
+    }
+     resultMsg='';
+    if(compChoice=='Ball'){
+        resultMsg='Its a Tie';
+    }
+    else if(compChoice=='Bat'){
+        resultMsg='OH! YOU LOST';
+    }
+    else {
+        resultMsg='You Won';
+    }
+    alert(`YOU HAVE CHOOSEN Ball. COMPUTER CHOICE IS ${compChoice} and ${resultMsg}`);
+    ">Ball</button>
+
+    <button onclick="
+     randomNumber= Math.random()*3;
+     compChoice='';
+    if(randomNumber<=1){
+         compChoice ='Bat';
+    }
+    else if(randomNumber<=2){
+         compChoice ='Ball';
+    }
+    else {
+         compChoice ='Stump';
+    }
+     resultMsg='';
+    if(compChoice=='Ball'){
+        resultMsg= 'OH! You lost';
+    }
+    else if(compChoice=='Bat'){
+        resultMsg='You Won';
+    }
+    else {
+       resultMsg= 'Its a Tie';
+    }
+    alert(`YOU HAVE CHOOSEN Stump. COMPUTER CHOICE IS ${compChoice} and ${resultMsg}`);
+    ">Stump</button>
+</body>
+</html>
+
