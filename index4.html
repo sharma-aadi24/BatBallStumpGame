@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BAT BALL STUMP</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <button
+      onclick="
+        let compChoice = generatecompchoice();
+        alert(
+          `YOU HAVE CHOSEN Bat. COMPUTER CHOICE IS ${compChoice} and ${getResult('Bat', compChoice)}`,
+        );
+      "
+    >
+      Bat
+    </button>
+
+    <button
+      onclick="
+       compChoice = generatecompchoice();
+        alert(
+          `YOU HAVE CHOSEN Ball. COMPUTER CHOICE IS ${compChoice} and ${getResult('Ball', compChoice)}`,
+        );
+      "
+    >
+      Ball
+    </button>
+
+    <button
+      onclick="
+        compChoice = generatecompchoice();
+        alert(
+          `YOU HAVE CHOSEN Stump. COMPUTER CHOICE IS ${compChoice} and ${getResult('Stump', compChoice)}`,
+        );
+      "
+    >
+      Stump
+    </button>
+
+    <script>
+      function generatecompchoice() {
+        let randomNumber = Math.random() * 3;
+        if (randomNumber <= 1) {
+          return "Bat";
+        } else if (randomNumber <= 2) {
+          return "Ball";
+        } else {
+          return "Stump";
+        }
+      }
+
+      function getResult(usermove, computermove) {
+        if (usermove == "Bat") {
+          if (computermove == "Ball") return "You Won";
+          else if (computermove == "Bat") return "It's a Tie";
+          else return "OH! YOU LOST";
+        } else if (usermove == "Ball") {
+          if (computermove == "Ball") return "It's a Tie";
+          else if (computermove == "Bat") return "OH! YOU LOST";
+          else return "You Won";
+        } else if (usermove == "Stump") {
+          if (computermove == "Ball") return "OH! You lost";
+          else if (computermove == "Bat") return "You Won";
+          else return "It's a Tie";
+        }
+      }
+    </script>
+  </body>
+</html>
